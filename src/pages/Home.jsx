@@ -35,7 +35,7 @@ export default function Home() {
         <button onClick={addBooknow}>Book Now</button>
       </div>
       <div className="right">
-        <img src={convention} width="320px" height="300px" ></img>
+        <img src={Image} width="320px" height="300px" ></img>
        
     </div>
     
