@@ -1,5 +1,5 @@
 import React,{useState} from "react";
-import convention from '../assets/Image.jpg'
+import Image from '../assets/image.png'
 import Facilities from "../components/Facilities";
 import { useLocation, useNavigate } from "react-router-dom";
 import Modal from "../components/Modal";
