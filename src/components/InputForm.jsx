@@ -7,13 +7,15 @@ export default function Form({ setIsOpen }) {
     const [sign, setSign] = useState(false)
     const [error, setError] = useState("")
 
+    const BASE_URL = import.meta.env.VITE_API_URL || "http://localhost:5000"; 
+
     const handleSubmit = async (e) => {
         e.preventDefault()
         setError("") // clear old errors
         let endpoint = sign ? "signUp" : "login"
 
         try {
-            const res = await Axios.post(`http://localhost:5000/${endpoint}`, { email, password })
+            const res = await Axios.post(`${BASE_URL}/${endpoint}`, { email, password });
             localStorage.setItem("token", res.data.token)
             localStorage.setItem("user", JSON.stringify(res.data.user))
             setIsOpen(false) // close modal
